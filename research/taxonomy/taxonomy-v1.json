@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "name": "PartlyGood Topic Taxonomy",
+  "fields": [
+    {"id": "mgmt", "name": "Management", "scope": "planning, org design, decision-making, meetings, delegation, performance management"},
+    {"id": "ops", "name": "Operations", "scope": "process design, supply chain, procurement, quality, project operations"},
+    {"id": "finance", "name": "Finance", "scope": "FP&A, budgeting, forecasting, invoicing, reporting, treasury ops"},
+    {"id": "marketing", "name": "Marketing", "scope": "campaigns, content, SEO, CRM, analytics, brand"},
+    {"id": "sales", "name": "Sales", "scope": "pipeline, forecasting, proposals, CRM hygiene, account management"},
+    {"id": "hr-domain", "name": "HR / People", "scope": "hiring ops, onboarding, reviews, retention, L&D admin"},
+    {"id": "strategy", "name": "Strategy", "scope": "planning cycles, OKRs, competitive analysis, scenario planning"},
+    {"id": "cs", "name": "Customer Success", "scope": "onboarding, health scoring, renewal intelligence, support ops"},
+    {"id": "legal", "name": "Legal & Compliance", "scope": "contract review ops, policy writing, risk registers"},
+    {"id": "research", "name": "Research & Knowledge", "scope": "literature search, evidence synthesis, knowledge management"}
+  ],
+  "pillars": [
+    {"id": "wf.research", "name": "Research & synthesis", "meaning": "finding, filtering, summarizing, and synthesizing information"},
+    {"id": "wf.comms", "name": "Communication", "meaning": "drafting, editing, summarizing, translating, tone"},
+    {"id": "wf.decision", "name": "Decision support", "meaning": "analysis, options, tradeoffs, prioritization"},
+    {"id": "wf.automation", "name": "Automation & process", "meaning": "workflow automation, integrations, orchestrations"},
+    {"id": "wf.analysis", "name": "Analysis & reporting", "meaning": "numbers, data, dashboards, evaluations"},
+    {"id": "wf.crm", "name": "CRM & relationship ops", "meaning": "pipeline, contacts, outreach, follow-up"},
+    {"id": "wf.docs", "name": "Documents & contracts", "meaning": "writing, reviewing, standardizing documents"}
+  ],
+  "topics": [
+    "mgmt.meetings", "mgmt.planning", "mgmt.delegation", "mgmt.performance", "mgmt.1on1s",
+    "ops.process", "ops.procurement", "ops.inventory", "ops.quality", "ops.support", "ops.rpa",
+    "finance.budget", "finance.forecast", "finance.invoice", "finance.report", "finance.audit",
+    "marketing.content", "marketing.seo", "marketing.crm", "marketing.analytics", "marketing.brand",
+    "sales.pipeline", "sales.proposals", "sales.forecast", "sales.crm",
+    "hr.hiring", "hr.onboarding", "hr.reviews", "hr.retention", "hr.ld",
+    "strategy.okrs", "strategy.scenarios", "strategy.competitive", "strategy.roadmap",
+    "cs.onboarding", "cs.health", "cs.renewals", "cs.comms",
+    "legal.contracts", "legal.policies", "legal.risk",
+    "research.litreview", "research.synthesis", "research.taxonomy", "research.citation",
+    "ai.prompting", "ai.agents", "ai.automation", "ai.evaluation", "ai.safety", "ai.adoption"
+  ],
+  "content_types": [
+    {"id": "playbook", "name": "Reproducible how-to workflow", "typical_length": "1500-3000 words"},
+    {"id": "explainer", "name": "Concept / framework explainer", "typical_length": "800-1500 words"},
+    {"id": "case-study", "name": "Worked real-world example", "typical_length": "1000-2000 words"},
+    {"id": "tool-guide", "name": "Guide to a specific AI tool", "typical_length": "800-1500 words"},
+    {"id": "playbook.template", "name": "Template/checklist artifact", "typical_length": "< 2000 words"}
+  ],
+  "editorial_stages": ["research", "brief", "draft", "review", "publish"]
+}

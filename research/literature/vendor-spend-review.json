@@ -1,0 +1,96 @@
+{
+  "subject": "AI in spend/procurement analysis for management workflow",
+  "default_query": "spend analysis procurement artificial intelligence",
+  "queries": [
+    {
+      "at": "2026-08-19T04:33:58",
+      "query": "spend analysis procurement artificial intelligence",
+      "limit": 5,
+      "since": null,
+      "count": 5,
+      "results": [
+        {
+          "title": "Artificial intelligence (AI) applications for marketing: A literature-based study",
+          "doi": "https://doi.org/10.1016/j.ijin.2022.08.005",
+          "url": "https://doi.org/10.1016/j.ijin.2022.08.005",
+          "authors": [
+            "Abid Haleem",
+            "Mohd Javaid",
+            "Mohammad Asim Qadri",
+            "Ravi Pratap Singh",
+            "Rajiv Suman"
+          ],
+          "year": 2022,
+          "venue": "International Journal of Intelligent Networks",
+          "type": "article",
+          "cited_by": 882
+        },
+        {
+          "title": "Artificial intelligence in the construction industry: A review of present status, opportunities and future challenges",
+          "doi": "https://doi.org/10.1016/j.jobe.2021.103299",
+          "url": "https://doi.org/10.1016/j.jobe.2021.103299",
+          "authors": [
+            "Sofiat Abioye",
+            "Lukumon O. Oyedele",
+            "Lukman Akanbi",
+            "Anuoluwapo Ajayi",
+            "Juan Manuel Dávila Delgado",
+            "Muhammad Bilal",
+            "Olúgbénga O. Akinadé",
+            "Ashraf Ahmed"
+          ],
+          "year": 2021,
+          "venue": "Journal of Building Engineering",
+          "type": "article",
+          "cited_by": 958
+        },
+        {
+          "title": "Artificial intelligence in information systems research: A systematic literature review and research agenda",
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2021.102383",
+          "url": "https://doi.org/10.1016/j.ijinfomgt.2021.102383",
+          "authors": [
+            "Christopher Collins",
+            "Denis Dennehy",
+            "Kieran Conboy",
+            "Patrick Mikalef"
+          ],
+          "year": 2021,
+          "venue": "International Journal of Information Management",
+          "type": "review",
+          "cited_by": 750
+        },
+        {
+          "title": "Generative artificial intelligence in supply chain and operations management: a capability-based framework for analysis and implementation",
+          "doi": "https://doi.org/10.1080/00207543.2024.2309309",
+          "url": "https://doi.org/10.1080/00207543.2024.2309309",
+          "authors": [
+            "Ilya Jackson",
+            "Dmitry Ivanov",
+            "Alexandre Dolgui",
+            "Jafar Namdar"
+          ],
+          "year": 2024,
+          "venue": "International Journal of Production Research",
+          "type": "article",
+          "cited_by": 393
+        },
+        {
+          "title": "Artificial intelligence in innovation research: A systematic review, conceptual framework, and future research directions",
+          "doi": "https://doi.org/10.1016/j.technovation.2022.102623",
+          "url": "https://doi.org/10.1016/j.technovation.2022.102623",
+          "authors": [
+            "Marcello M. Mariani",
+            "Isa Machado",
+            "Vittoria Magrelli",
+            "Yogesh K. Dwivedi"
+          ],
+          "year": 2022,
+          "venue": "Technovation",
+          "type": "review",
+          "cited_by": 542
+        }
+      ]
+    }
+  ],
+  "lastRunAt": "2026-08-19T04:33:58"
+}

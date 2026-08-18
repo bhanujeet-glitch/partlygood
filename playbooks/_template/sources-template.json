@@ -1,0 +1,17 @@
+{
+  "title": "Playbook title",
+  "briefId": "brief-id",
+  "content_type": "playbook",
+  "sources": [
+    {
+      "id": "src1",
+      "title": "Title of source",
+      "url": "https://example.com/source",
+      "kind": "official",
+      "confidence": "high",
+      "accessed": "YYYY-MM-DD",
+      "notes": "What this source says and which claims it supports",
+      "claims": ["claim 1", "claim 2"]
+    }
+  ]
+}

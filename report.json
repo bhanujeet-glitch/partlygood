@@ -1,0 +1,178 @@
+{
+  "generated_at": "2026-08-18T23:06:49.197669+00:00",
+  "total_files": 10,
+  "files": {
+    "about.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 262
+    },
+    "cross-cutting/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 128
+    },
+    "finance/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "finance",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 35
+    },
+    "index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 208
+    },
+    "management/drafting-meeting-minutes-with-ai.md": {
+      "status": "published",
+      "type": "playbook",
+      "field": "management",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 519
+    },
+    "management/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "management",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 65
+    },
+    "marketing/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "marketing",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 32
+    },
+    "operations/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "operations",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 49
+    },
+    "samples/index.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 141
+    },
+    "taxonomy.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 351
+    }
+  },
+  "verdict": "pass",
+  "failed_files": 0
+}

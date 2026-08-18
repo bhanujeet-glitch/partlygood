@@ -1,0 +1,64 @@
+# --- PartlyGood MkDocs configuration ---
+
+site_name: PartlyGood
+site_description: Practical knowledge for using AI in management workflows and other non-engineering fields.
+site_url: https://partlygood.example.com
+repo_url: ""
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon
+      name: PartlyGood
+  generator: false
+
+# Navigation is generated from the docs/ tree; the taxonomy in
+# docs/taxonomy.md defines field sections. Content is organized as:
+#   docs/index.md (home)
+#   docs/<field>/   (management, operations, finance, marketing, cross-cutting)
+#   docs/taxonomy.md
+#   docs/about.md

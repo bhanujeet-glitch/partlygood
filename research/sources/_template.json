@@ -1,0 +1,17 @@
+{
+  "title": "Piece title (keep in sync with the brief)",
+  "briefId": "kebab-case-brief-id",
+  "generated": "YYYY-MM-DD",
+  "sources": [
+    {
+      "id": "src1",
+      "title": "Human-readable source title",
+      "url": "https://...",
+      "kind": "official | peer-reviewed | primary | practitioner | vendor-docs",
+      "confidence": "high | medium | low",
+      "accessed": "YYYY-MM-DD",
+      "notes": "What this source says, and which claims in the piece it supports",
+      "claims": ["claims this source supports, matching key-claims list"]
+    }
+  ]
+}

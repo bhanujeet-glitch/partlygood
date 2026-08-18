@@ -1,0 +1,29 @@
+name: publication-quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Structural validation
+        run: python scripts/validate_content.py --strict
+      - name: Quality gate
+        run: python scripts/quality_checks.py --all
+      - name: Production build (strict)
+        run: python -m mkdocs build --strict
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site/
+          if-no-files-found: error

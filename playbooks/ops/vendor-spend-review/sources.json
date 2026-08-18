@@ -1,0 +1,47 @@
+{
+  "title": "AI-assisted weekly vendor spend review",
+  "briefId": "vendor-spend-review",
+  "content_type": "playbook",
+  "sources": [
+    {
+      "id": "src1",
+      "title": "Microsoft 365 Copilot overview — official capability documentation",
+      "url": "https://support.microsoft.com/en-us/copilot",
+      "kind": "vendor-docs",
+      "confidence": "high",
+      "accessed": "2026-08-19",
+      "notes": "Describes assistant drafting/summarizing with grounding in user data and citations; used for claims about what the assistant can do.",
+      "claims": ["assistant can draft grounded summaries", "output is a draft requiring review"]
+    },
+    {
+      "id": "src2",
+      "title": "ChatGPT official help center — accuracy and limitations",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "kind": "official",
+      "confidence": "high",
+      "accessed": "2026-08-19",
+      "notes": "Covers limitations of generated output and the need for human verification of numbers.",
+      "claims": ["generated numbers must be human-verified", "limits on accuracy"]
+    },
+    {
+      "id": "src3",
+      "title": "APQC — Spend Analysis process framework",
+      "url": "https://www.apqc.org/",
+      "kind": "practitioner",
+      "confidence": "medium",
+      "accessed": "2026-08-19",
+      "notes": "Process standards for procurement/spend management; context for the weekly ritual.",
+      "claims": ["spend review is a standard procurement process"]
+    },
+    {
+      "id": "src4",
+      "title": "Microsoft 365 Copilot — data, privacy and security transparency",
+      "url": "https://learn.microsoft.com/en-us/copilot/privacy-and-protected-material",
+      "kind": "vendor-docs",
+      "confidence": "high",
+      "accessed": "2026-08-19",
+      "notes": "Documents how Copilot handles user data; supports the data-policy caveat.",
+      "claims": ["data handling subject to org policy", "output grounded in user data"]
+    }
+  ]
+}
