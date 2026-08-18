@@ -127,7 +127,7 @@ def main():
                 for a in (w.get("authorships") or [])
             ][:8],
             "year": None,
-            "venue": (w.get("primary_location") or {}).get("source", {}).get("display_name"),
+            "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name"),
             "type": w.get("type"),
             "cited_by": w.get("cited_by_count"),
         }
