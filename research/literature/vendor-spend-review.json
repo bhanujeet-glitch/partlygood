@@ -90,7 +90,52 @@
           "cited_by": 542
         }
       ]
+    },
+    {
+      "at": "2026-08-19T04:41:37",
+      "query": "spend analysis procurement artificial intelligence",
+      "limit": 2,
+      "since": null,
+      "count": 2,
+      "results": [
+        {
+          "title": "Artificial intelligence (AI) applications for marketing: A literature-based study",
+          "doi": "https://doi.org/10.1016/j.ijin.2022.08.005",
+          "url": "https://doi.org/10.1016/j.ijin.2022.08.005",
+          "authors": [
+            "Abid Haleem",
+            "Mohd Javaid",
+            "Mohammad Asim Qadri",
+            "Ravi Pratap Singh",
+            "Rajiv Suman"
+          ],
+          "year": 2022,
+          "venue": "International Journal of Intelligent Networks",
+          "type": "article",
+          "cited_by": 882
+        },
+        {
+          "title": "Artificial intelligence in the construction industry: A review of present status, opportunities and future challenges",
+          "doi": "https://doi.org/10.1016/j.jobe.2021.103299",
+          "url": "https://doi.org/10.1016/j.jobe.2021.103299",
+          "authors": [
+            "Sofiat Abioye",
+            "Lukumon O. Oyedele",
+            "Lukman Akanbi",
+            "Anuoluwapo Ajayi",
+            "Juan Manuel Dávila Delgado",
+            "Muhammad Bilal",
+            "Olúgbénga O. Akinadé",
+            "Ashraf Ahmed"
+          ],
+          "year": 2021,
+          "venue": "Journal of Building Engineering",
+          "type": "article",
+          "cited_by": 958
+        }
+      ]
     }
   ],
-  "lastRunAt": "2026-08-19T04:33:58"
+  "lastRunAt": "2026-08-19T04:41:37",
+  "last_run_at": null
 }
