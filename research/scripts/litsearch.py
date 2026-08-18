@@ -33,9 +33,9 @@ BASE = "https://api.openalex.org/works"
 
 SUBJECT_TEMPLATE = {
     "subject": "<subject-name>",
-    "defaultQuery": "<what to search>",
+    "default_query": "<what to search>",
     "queries": [],
-    "lastRun": None,
+    "last_run_at": None,
 }
 
 
@@ -50,7 +50,21 @@ def load_subject(path):
         print("Created subject file: %s (edit its 'subject' and 'default_query')" % path)
         sys.exit(2)
     with open(path, "r", encoding="utf-8") as fh:
-        return json.load(fh)
+        data = json.load(fh)
+    # backfill keys missing from older/hand-made files so they never crash
+    changed = False
+    for key, val in SUBJECT_TEMPLATE.items():
+        if key not in data:
+            data[key] = val
+            changed = True
+    legacy = {"defaultQuery": "default_query", "lastRun": "last_run_at"}
+    for old, new in legacy.items():
+        if old in data and new not in data:
+            data[new] = data.pop(old)
+            changed = True
+    if changed:
+        save_subject(path, data)
+    return data
 
 
 def save_subject(path, data):
