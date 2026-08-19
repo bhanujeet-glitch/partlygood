@@ -2,12 +2,13 @@
 
 site_name: PartlyGood
 site_description: Practical knowledge for using AI in management workflows and other non-engineering fields.
-site_url: https://partlygood.example.com
+site_url: https://bhanujeet-glitch.github.io/partlygood/
 repo_url: ""
 edit_uri: ""
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -51,6 +52,9 @@ plugins:
       minify_html: true
 
 extra:
+  analytics:
+    provider: plausible
+    domain: partlygood.bhanujeet-glitch.github.io
   social:
     - icon: fontawesome/brands/mastodon
       name: PartlyGood

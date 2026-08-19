@@ -1,0 +1,12 @@
+{#-
+  Plausible Analytics — privacy-respecting, no cookies, GDPR-compliant.
+  This template override injects a self-hosted / plausible.io script via the
+  Material analytics block. Set `extra.analytics.provider: plausible` and
+  `extra.analytics.plausible_domain` as the tracked domain.
+-#}
+{% if config.extra.analytics and config.extra.analytics.provider == "plausible" %}
+  {% set domain = config.extra.analytics.get("plausible_domain", config.extra.analytics.domain) %}
+  <script defer
+    data-domain="{{ domain }}"
+    src="https://plausible.io/js/script.js"></script>
+{% endif %}
