@@ -21,7 +21,8 @@ business.
 
 ## Playbooks
 
-None published yet — in the editor.
+- [AI-assisted weekly vendor spend review](vendor-spend-review.md) — run a weekly vendor-spend
+  review in ~30 minutes with AI drafting the summary and anomaly flags.
 
 ## Planned topics
 
