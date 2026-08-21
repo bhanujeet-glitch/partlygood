@@ -1,6 +1,17 @@
 {
-  "title": "AI-prepared meeting agendas from Outlook",
-  "briefId": "meeting-agenda-outlook",
+  "title": "Drafting meeting minutes with AI",
+  "briefId": "drafting-meeting-minutes-with-ai",
   "content_type": "playbook",
-  "sources": []
+  "sources": [
+    {
+      "id": "src1",
+      "title": "Transcribe your recordings — Microsoft Support (Word/Office transcription)",
+      "url": "https://support.microsoft.com/en-us/word/transcribe-your-recordings",
+      "kind": "official",
+      "confidence": "high",
+      "accessed": "2026-08-21",
+      "notes": "Official Microsoft documentation for transcribing recordings in Word/Office; supports the meet recording-to-transcript step and the wait-for-processing caveat.",
+      "claims": ["meeting platforms can generate a transcript", "transcripts still generating produce truncated content"]
+    }
+  ]
 }

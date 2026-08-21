@@ -35,12 +35,12 @@
     },
     {
       "id": "src4",
-      "title": "Microsoft 365 Copilot — data, privacy and security transparency",
-      "url": "https://learn.microsoft.com/en-us/copilot/privacy-and-protected-material",
+      "title": "Microsoft 365 Copilot — Data, Privacy and Security documentation",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/microsoft-365-copilot-privacy",
       "kind": "vendor-docs",
       "confidence": "high",
-      "accessed": "2026-08-19",
-      "notes": "Documents how Copilot handles user data; supports the data-policy caveat.",
+      "accessed": "2026-08-21",
+      "notes": "Microsoft's official data, privacy, and security documentation for Copilot; supports the data-policy caveat in the playbook.",
       "claims": ["data handling subject to org policy", "output grounded in user data"]
     }
   ]

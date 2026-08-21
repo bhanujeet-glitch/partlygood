@@ -116,12 +116,68 @@ def check_ai_usage_preview(doc, out):
     out.append(("ai_usage_preview", ok, f"{doc['__path'].name}: missing AI usage section" if not ok else ""))
 
 
+# --- AI-usage claim metering ------------------------------------------------
+# Editorial standard: a piece that uses AI must "meter" AI work against human
+# work. Concretely, a compliant piece must (a) open with an explicit "AI
+# usage" statement (a blockquote naming what the AI does and what the human
+# owns), and (b) contain at least one human-verification gate (a step or
+# checklist item where the human must check/correct/verify the AI's output).
+# This turns the bare "AI usage" section-presence check into a meter of
+# whether claims are actually bounded by human oversight.
+AI_USAGE_METER_HINTS = ("ai usage", "what you will do", "before you start", "failure modes")
+HUMAN_GATE_MARKERS = (
+    re.compile(r"\b(a human (owns|verifies|decides|checks|corrects|signs)|you are the final reviewer|"
+               r"cross-check|verify (the|every|each)|independently (sum|compute)|check the output|"
+               r"human pass|review the output|verify action|not optional)\b", re.IGNORECASE),
+)
+# Signs that the piece claims the AI decides/acts without a human gate (i.e.
+# under-metered: overstating what AI owns). Flag these so the editor moves
+# the claim to the human column.
+OVERSTATED_AI_MARKERS = re.compile(
+    r"\b(AI (decides|commits|is responsible for|approves|owns|guarantees|ensures)|"
+    r"the AI (decides|owns|approves)|automatic(ally)? (approves?|decides?))\b", re.IGNORECASE,
+)
+
+
+def _meter(doc):
+    """Return (has_ai_statement, n_gates, overstated)."""
+    body = doc["__body"]
+    lowered = body.lower()
+    has_ai_statement = False
+    # Require an explicit "AI usage" Blockquote at the top (standard).
+    if "> **ai usage:**" in lowered or "**ai usage:**" in lowered:
+        has_ai_statement = True
+    elif any(m in lowered for m in ("what you will do",)):
+        has_ai_statement = True
+    gates = sum(bool(m.search(body)) for m in HUMAN_GATE_MARKERS)
+    overstated = len(OVERSTATED_AI_MARKERS.findall(lowered))
+    return has_ai_statement, gates, overstated
+
+
+def check_ai_usage_metering(doc, out):
+    kind = doc.get("type")
+    if kind not in ("playbook", "how-to"):
+        out.append(("ai_usage_meter", True, f"{doc['__path'].name}: n/a for {kind}"))
+        return
+    has_statement, gates, overstated = _meter(doc)
+    notes = []
+    if not has_statement:
+        notes.append("no explicit 'AI usage' statement")
+    if gates < 1:
+        notes.append("no human-verification gate")
+    if overstated:
+        notes.append(f"{overstated} overstated AI-claim marker(s)")
+    ok = has_statement and gates >= 1 and overstated == 0
+    out.append(("ai_usage_meter", ok,
+                f"{doc['__path'].name}: AI statement={has_statement}, human gates={gates}, overstated_claims={overstated}" if not ok else ""))
+
+
 def check_sources_attribution(doc, out):
     body = doc["__body"]
     if not URL_RE.search(body):
         out.append(("sources_attribution", True, f"{doc['__path'].name}: (no URLs)"))
         return
-    claims = TOOL_CLAIM.findall(body)
+    claims = TOOL_CLAIM_RE.findall(body)
     ok = bool(doc["__urls"])  # any URL present satisfies attribution for now
     out.append(("sources_attribution", ok, f"{doc['__path'].name}: {len(claims)} tool claims, {len(doc['__urls'])} URLs" if not ok else ""))
 
@@ -175,6 +231,7 @@ CHECKS = [
     check_title_length,
     check_min_body_length,
     check_ai_usage_preview,
+    check_ai_usage_metering,
     check_sources_attribution,
     check_no_todo_placeholders,
     check_taxonomy_conformance,

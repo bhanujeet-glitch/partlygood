@@ -11,7 +11,7 @@ tags: [meetings, minutes, transcription]
 audience: "Managers, team leads, and executive assistants"
 difficulty: beginner
 sources:
-  - https://support.microsoft.com/en-us/office/transcribe-your-meetings-4494d655-2c9c-4b2b-8f2e-9f4c1e4f3de1
+  - https://support.microsoft.com/en-us/word/transcribe-your-recordings
 quality:
   checked_at: ""
   checks_passed: 0

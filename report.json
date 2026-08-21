@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18T23:10:43.926372+00:00",
-  "total_files": 10,
+  "generated_at": "2026-08-21T02:41:31.639965+00:00",
+  "total_files": 12,
   "files": {
     "about.md": {
       "status": "published",
@@ -11,13 +11,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 262
+      "words": 262,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "cross-cutting/index.md": {
       "status": "published",
@@ -28,13 +36,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 128
+      "words": 176,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "finance/index.md": {
       "status": "published",
@@ -45,13 +61,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 35
+      "words": 35,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "index.md": {
       "status": "published",
@@ -62,13 +86,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 208
+      "words": 208,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "management/drafting-meeting-minutes-with-ai.md": {
       "status": "published",
@@ -79,13 +111,27 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 519
+      "words": 519,
+      "ai_meter": {
+        "ai_statement": true,
+        "human_gates": 1,
+        "overstated_claims": 0
+      },
+      "sources_verified": {
+        "count": 1,
+        "verified": 1,
+        "dead": 0,
+        "missing": 0,
+        "ok": true,
+        "hint": null
+      }
     },
     "management/index.md": {
       "status": "published",
@@ -96,13 +142,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 65
+      "words": 65,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "marketing/index.md": {
       "status": "published",
@@ -113,13 +167,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 32
+      "words": 32,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "operations/index.md": {
       "status": "published",
@@ -130,13 +192,77 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 49
+      "words": 70,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
+    },
+    "operations/vendor-spend-review.md": {
+      "status": "published",
+      "type": "playbook",
+      "field": "operations",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "ai_usage_meter": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 717,
+      "ai_meter": {
+        "ai_statement": true,
+        "human_gates": 1,
+        "overstated_claims": 0
+      },
+      "sources_verified": {
+        "count": 4,
+        "verified": 4,
+        "dead": 0,
+        "missing": 0,
+        "ok": true,
+        "hint": null
+      }
+    },
+    "qa-report-sample-pieces.md": {
+      "status": "published",
+      "type": "canonical",
+      "field": "cross-cutting",
+      "checks": {
+        "required_front_matter": true,
+        "title_length": true,
+        "min_body_length": true,
+        "ai_usage_preview": true,
+        "ai_usage_meter": true,
+        "sources_attribution": true,
+        "no_todo_placeholders": true,
+        "taxonomy_conformance": true,
+        "freshness": true
+      },
+      "pass": true,
+      "words": 487,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "samples/index.md": {
       "status": "published",
@@ -147,13 +273,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 141
+      "words": 141,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     },
     "taxonomy.md": {
       "status": "published",
@@ -164,13 +298,21 @@
         "title_length": true,
         "min_body_length": true,
         "ai_usage_preview": true,
+        "ai_usage_meter": true,
         "sources_attribution": true,
         "no_todo_placeholders": true,
         "taxonomy_conformance": true,
         "freshness": true
       },
       "pass": true,
-      "words": 351
+      "words": 592,
+      "sources_verified": {
+        "count": 0,
+        "verified": 0,
+        "dead": 0,
+        "missing": 0,
+        "ok": true
+      }
     }
   },
   "verdict": "pass",

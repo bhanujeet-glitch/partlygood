@@ -14,7 +14,7 @@ sources:
   - https://support.microsoft.com/en-us/copilot
   - https://help.openai.com/en/articles/6825453-chatgpt-release-notes
   - https://www.apqc.org/
-  - https://learn.microsoft.com/en-us/copilot/privacy-and-protected-material
+  - https://learn.microsoft.com/en-us/microsoft-365-copilot/microsoft-365-copilot-privacy
 quality:
   checked_at: "2026-08-20"
   checks_passed: 0
