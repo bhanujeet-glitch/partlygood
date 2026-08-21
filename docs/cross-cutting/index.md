@@ -27,6 +27,14 @@ to verify AI output, and how to save a workflow so it is repeatable.
 - **Attribution and sourcing**: any claim about tools or model behavior
   gets a source link.
 
+## Cross-cutting topics
+
+The taxonomy defines an explicit cross-cutting dimension (`ai.*` topics,
+added in taxonomy v1.1) that applies to every field: prompting, agents,
+automation, evaluation, safety, adoption, data, documents, reporting,
+vendors, and security. See the [content taxonomy](../taxonomy.md) and
+`research/taxonomy/taxonomy-v1.1.json`.
+
 ## Playbook template (with PAR-4)
 
 The canonical playbook structure described in the

@@ -1,0 +1,79 @@
+{
+  "version": "1.1",
+  "name": "PartlyGood Topic Taxonomy",
+  "based_on_version": "1.0",
+  "description": "Evolution of the PartlyGood taxonomy. v1.1 adds an explicit cross-cutting topic dimension, topic governance metadata, and a changelog, while preserving every v1.0 topic id for backward compatibility with published pieces.",
+  "fields": [
+    {"id": "mgmt", "name": "Management", "scope": "planning, org design, decision-making, meetings, delegation, performance management"},
+    {"id": "ops", "name": "Operations", "scope": "process design, supply chain, procurement, quality, project operations"},
+    {"id": "finance", "name": "Finance", "scope": "FP&A, budgeting, forecasting, invoicing, reporting, treasury ops"},
+    {"id": "marketing", "name": "Marketing", "scope": "campaigns, content, SEO, CRM, analytics, brand"},
+    {"id": "sales", "name": "Sales", "scope": "pipeline, forecasting, proposals, CRM hygiene, account management"},
+    {"id": "hr-domain", "name": "HR / People", "scope": "hiring ops, onboarding, reviews, retention, L&D admin"},
+    {"id": "strategy", "name": "Strategy", "scope": "planning cycles, OKRs, competitive analysis, scenario planning"},
+    {"id": "cs", "name": "Customer Success", "scope": "onboarding, health scoring, renewal intelligence, support ops"},
+    {"id": "legal", "name": "Legal & Compliance", "scope": "contract review ops, policy writing, risk registers"},
+    {"id": "research", "name": "Research & Knowledge", "scope": "literature search, evidence synthesis, knowledge management"},
+    {"id": "cc", "name": "Cross-cutting", "scope": "AI capabilities, enablers, and operating patterns shared across every field"}
+  ],
+  "pillars": [
+    {"id": "wf.research", "name": "Research & synthesis", "meaning": "finding, filtering, summarizing, and synthesizing information"},
+    {"id": "wf.comms", "name": "Communication", "meaning": "drafting, editing, summarizing, translating, tone"},
+    {"id": "wf.decision", "name": "Decision support", "meaning": "analysis, options, tradeoffs, prioritization"},
+    {"id": "wf.automation", "name": "Automation & process", "meaning": "workflow automation, integrations, orchestrations"},
+    {"id": "wf.analysis", "name": "Analysis & reporting", "meaning": "numbers, data, dashboards, evaluations"},
+    {"id": "wf.crm", "name": "CRM & relationship ops", "meaning": "pipeline, contacts, outreach, follow-up"},
+    {"id": "wf.docs", "name": "Documents & contracts", "meaning": "writing, reviewing, standardizing documents"}
+  ],
+  "topics": [
+    "mgmt.meetings", "mgmt.planning", "mgmt.delegation", "mgmt.performance", "mgmt.1on1s",
+    "ops.process", "ops.procurement", "ops.inventory", "ops.quality", "ops.support", "ops.rpa",
+    "finance.budget", "finance.forecast", "finance.invoice", "finance.report", "finance.audit",
+    "marketing.content", "marketing.seo", "marketing.crm", "marketing.analytics", "marketing.brand",
+    "sales.pipeline", "sales.proposals", "sales.forecast", "sales.crm",
+    "hr.hiring", "hr.onboarding", "hr.reviews", "hr.retention", "hr.ld",
+    "strategy.okrs", "strategy.scenarios", "strategy.competitive", "strategy.roadmap",
+    "cs.onboarding", "cs.health", "cs.renewals", "cs.comms",
+    "legal.contracts", "legal.policies", "legal.risk",
+    "research.litreview", "research.synthesis", "research.taxonomy", "research.citation",
+    "ai.prompting", "ai.agents", "ai.automation", "ai.evaluation", "ai.safety", "ai.adoption",
+    "ai.data", "ai.documents", "ai.reporting", "ai.vendors", "ai.security"
+  ],
+  "cross_cutting": {
+    "field": "cc",
+    "rationale": "Several AI capabilities serve every field. v1.0 already carried them under the ai.* prefix; v1.1 names them explicitly as a cross-cutting dimension so a piece can be tagged cross-cutting without being misread as a single field's asset.",
+    "topics": [
+      "ai.prompting", "ai.agents", "ai.automation", "ai.evaluation", "ai.safety", "ai.adoption",
+      "ai.data", "ai.documents", "ai.reporting", "ai.vendors", "ai.security"
+    ],
+    "new_in_1.1": ["ai.data", "ai.documents", "ai.reporting", "ai.vendors", "ai.security"]
+  },
+  "topic_metadata": {
+    "ai.data": {"name": "Data preparation & hygiene", "applies_to": "all fields", "cross_cutting": true},
+    "ai.documents": {"name": "Document drafting & ops", "applies_to": "all fields", "cross_cutting": true},
+    "ai.reporting": {"name": "Reporting & dashboards", "applies_to": "all fields", "cross_cutting": true},
+    "ai.vendors": {"name": "AI tool & vendor selection", "applies_to": "all fields", "cross_cutting": true},
+    "ai.security": {"name": "Privacy, permissions & data handling", "applies_to": "all fields", "cross_cutting": true}
+  },
+  "governance": {
+    "versioning": "SemVer-style MAJOR.MINOR. Each taxonomy change ships as a new taxonomy-v<MAJOR.MINOR>.json file; the previous file stays on disk so validators can diff for backward compatibility. MINOR: additive only (new topics, new metadata, new cross-cutting flags). MAJOR: any removal, rename, or repurposing of an existing topic id.",
+    "backward_compatibility": "Existing topic ids are never removed or renamed in a MINOR release. A new topic may be added only if no published piece already uses the id for a different meaning. When a topic id must change, that is a MAJOR change requiring an editorial migration and a content audit before release.",
+    "who_can_add_topics": "Any publisher / engineer may propose a new topic by opening an issue that names the topic id, the field it belongs to, a one-line scope, and (for cross-cutting) the fields it applies to. The Taxonomy owner (Founding Engineer) approves; the CEO owns editorial intent and may veto. No topic is added by a single contributor merging code without a review comment on the issue.",
+    "who_can_merge_topics": "Topic merges are MAJOR changes and require: (1) a decision on the issue with a named Taxonomy owner, (2) the merged topic's id chosen to keep the most-published id or redirect content, and (3) a published notice before the merge lands so existing pieces can be re-tagged.",
+    "update_process": "1) Open a taxonomy issue describing the change. 2) Branch or worktree off main. 3) Ship the new taxonomy-v<MAJOR.MINOR>.json. 4) Run scripts/taxonomy_compat.py to prove no existing topic id was dropped. 5) Update research/scripts/taxonomy.py if its load path changed. 6) Update docs/taxonomy.md and any references. 7) Run validate_content.py + quality_checks.py. 8) Merge on green. 9) Record the change in the changelog.",
+    "owners": [{"role": "Taxonomy owner", "agent": "Founding Engineer"}],
+    "conflict_resolution": "Escalate conflicting field/scope edits to the CEO (editorial intent)."
+  },
+  "content_types": [
+    {"id": "playbook", "name": "Reproducible how-to workflow", "typical_length": "1500-3000 words"},
+    {"id": "explainer", "name": "Concept / framework explainer", "typical_length": "800-1500 words"},
+    {"id": "case-study", "name": "Worked real-world example", "typical_length": "1000-2000 words"},
+    {"id": "tool-guide", "name": "Guide to a specific AI tool", "typical_length": "800-1500 words"},
+    {"id": "playbook.template", "name": "Template/checklist artifact", "typical_length": "< 2000 words"}
+  ],
+  "editorial_stages": ["research", "brief", "draft", "review", "publish"],
+  "changelog": [
+    {"version": "1.1", "date": "2026-08-21", "changes": ["Add explicit cross-cutting dimension (field 'cc')", "Add 5 new cross-cutting topics (ai.data, ai.documents, ai.reporting, ai.vendors, ai.security)", "Add governance.rules and update-process documentation section", "Add changelog", "All 50 v1.0 topic ids preserved (backward compatible)"], "breaking": false},
+    {"version": "1.0", "date": "2026-08-19", "changes": ["Initial taxonomy: 10 fields, 7 pillars, 50 topics, 5 content types, 5 editorial stages"], "breaking": false}
+  ]
+}

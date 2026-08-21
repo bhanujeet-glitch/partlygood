@@ -38,7 +38,9 @@ Write `research/briefs/{{brief_id}}.md` following the brief template
 Constraints:
 - Only include claims the research can support.
 - Keep the brief tighter than the notes; the brief is the contract.
-- Validate topic ids against `research/taxonomy/taxonomy-v1.json`.
+- Validate topic ids against the latest taxonomy
+  (`research/taxonomy/taxonomy-v*.json`, currently v1.1). The cross-cutting
+  `ai.*` topics may be used on any piece.
 
 ## Exit criteria
 

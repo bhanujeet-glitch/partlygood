@@ -27,7 +27,9 @@ python playbooks/_template/tools/validate_playbook.py playbooks/mgmt/meetings-ou
 
 Validation checks (all must pass before review):
 1. front matter present with required keys
-2. field/pillars/topics resolve against `research/taxonomy/taxonomy-v1.json`
+2. field/pillars/topics resolve against the latest taxonomy
+   (`research/taxonomy/taxonomy-v*.json`); run `research/scripts/taxonomy_compat.py`
+   when bumping a version.
 3. content_type is `playbook` (or explicit override)
 4. the template's numbered sections 1.-9. are present
 5. every `[src:ID]` marker in the body resolves to an entry in `sources.json`
