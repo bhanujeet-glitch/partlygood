@@ -16,8 +16,8 @@ quality:
 # Editorial QA report — published sample pieces
 
 Corresponds to issue **PAR-12** (Editorial QA pass on published sample pieces).
-Reviewed against the editorial standards in [How PartlyGood works](../about.md)
-and the playbook template contract in [samples](../samples/index.md).
+Reviewed against the editorial standards in [How PartlyGood works](about.md)
+and the playbook template contract in [samples](samples/index.md).
 
 ## Scope
 
